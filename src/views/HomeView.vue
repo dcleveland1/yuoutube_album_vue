@@ -1,18 +1,18 @@
+<script setup>
+// @ is an alias to /src
+import SearchComponent from '@/components/SearchComponent.vue';
+
+</script>
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SearchComponent />
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+<style>
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
-};
-</script>
+.home {
+  background-color: #F5F5F5;
+  height: 100%;
+}
+</style>

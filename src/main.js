@@ -2,5 +2,15 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import vuetify from './plugins/vuetify';
+import { loadFonts } from './plugins/webfontloader';
+import db from './firebase/firebaseConfig';
 
-createApp(App).use(store).use(router).mount('#app');
+loadFonts();
+
+createApp(App)
+  .use(router)
+  .use(store)
+  .use(vuetify)
+  .provide('db', db)
+  .mount('#app');
